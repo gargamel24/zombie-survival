@@ -2,12 +2,12 @@ function addZombie () {
     zombieImg = zombieImgs[randint(0, zombieImgs.length - 1)]
     z = sprites.create(zombieImg, SpriteKind.Enemy)
     tiles.placeOnRandomTile(z, sprites.castle.tilePath5)
-    z.follow(oldLady, 10)
+    z.follow(oldLady, 20)
     // Add the right facing and left facing costumes
     cloneImg = zombieImg.clone()
     cloneImg.flipX()
     sprites.setDataImage(z, "costume-right", zombieImg)
-    sprites.setDataImage(z, "costume-left", cloneImg)
+sprites.setDataImage(z, "costume-left", cloneImg)
 }
 info.onCountdownEnd(function () {
     level = level + 1
